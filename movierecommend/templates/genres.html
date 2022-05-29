@@ -1,0 +1,244 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/jquery.mCustomScrollbar.min.css'%}"
+    />
+    <link rel="stylesheet" href="{% static 'css/nouislider.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/plyr.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/photoswipe.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/default-skin.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/main.css'%}" />
+
+    <title>Miners-Genres</title>
+  </head>
+  <body class="body">
+    <!-- header -->
+    <header class="header">
+      <div class="header__wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="header__content">
+                <!-- header logo -->
+                <a href="/" class="header__logo">
+                  <h2>Minres-Movie</h2>
+                </a>
+                <!-- end header logo -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- page title -->
+    <section
+      class="section section--first section--bg"
+      data-bg="{% static 'img/section/section.jpg'%}"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section__wrap">
+              <!-- section title -->
+              <h2 class="section__title">Select Genres</h2>
+              <!-- end section title -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end page title -->
+
+    <!-- catalog -->
+    <div class="catalog">
+      <div class="container">
+        <form class="form" action="genres" method="post">
+			{% csrf_token %}
+          <div class="d-flex justify-content-between flex-wrap">
+            <div class="custom-control custom-checkbox image-checkbox mr-md-3">
+              <input type="checkbox" name="genres[]" value="Action" class="custom-control-input" id="ck1a" />
+              <label class="custom-control-label" for="ck1a">
+                <img
+                  src="{% static 'img/genres/action.jpg'%}"
+                  alt="#"
+                  style="width: 200px; height: 200px"
+                  class="rounded d-block mx-auto"
+                />
+                <div class="badge bg-light w-100">
+                  <h5 class="mx-auto">Action</h5>
+                </div>
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox image-checkbox">
+              <input type="checkbox" name="genres[]" value="Adventure" class="custom-control-input" id="ck1b" />
+              <label class="custom-control-label" for="ck1b">
+                <img
+                  src="{% static 'img/genres/Adventure.jpeg' %}"
+                  alt="#"
+                  style="width: 200px; height: 200px"
+                  class="rounded mx-auto d-block"
+                />
+                <div class="badge bg-light w-100">
+                  <h5 class="mx-auto">Adventure</h5>
+                </div>
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox image-checkbox">
+              <input type="checkbox" name="genres[]" value="Animations" class="custom-control-input" id="ck1c" />
+              <label class="custom-control-label" for="ck1c">
+                <img
+                  src="{% static 'img/genres/Animation.jpeg'%}"
+                  alt="#"
+                  style="width: 200px; height: 200px"
+                  class="rounded mx-auto d-block"
+                />
+                <div class="badge bg-light w-100">
+                  <h5 class="mx-auto">Animations</h5>
+                </div>
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox image-checkbox">
+              <input type="checkbox" name="genres[]" value="Comedy" class="custom-control-input" id="ck1d" />
+              <label class="custom-control-label" for="ck1d">
+                <img
+                  src="{% static 'img/genres/Comedy.jpeg'%}"
+                  alt="#"
+                  style="width: 200px; height: 200px"
+                  class="rounded mx-auto d-block"
+                />
+                <div class="badge bg-light w-100">
+                  <h5 class="mx-auto">Comedy</h5>
+                </div>
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox image-checkbox">
+              <input type="checkbox"  name="genres[]" value="Family" class="custom-control-input" id="ck1e" />
+              <label class="custom-control-label" for="ck1e">
+                <img
+                  src="{% static 'img/genres/Family.jpeg'%}"
+                  alt="#"
+                  style="width: 200px; height: 200px"
+                  class="rounded mx-auto d-block"
+                />
+                <div class="badge bg-light w-100">
+                  <h5 class="mx-auto">Family</h5>
+                </div>
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox image-checkbox">
+              <input type="checkbox" name="genres[]" value="Fantasy" class="custom-control-input" id="ck1f" />
+              <label class="custom-control-label" for="ck1f">
+                <img
+                  src="{% static 'img/genres/Fantasy.jpeg'%}"
+                  alt="#"
+                  style="width: 200px; height: 200px"
+                  class="rounded mx-auto d-block"
+                />
+                <div class="badge bg-light w-100">
+                  <h5 class="mx-auto">Fantasy</h5>
+                </div>
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox image-checkbox">
+              <input type="checkbox" name="genres[]" value="romance" class="custom-control-input" id="ck1g" />
+              <label class="custom-control-label" for="ck1g">
+                <img
+                  src="{% static 'img/genres/romance.jpeg'%}"
+                  alt="#"
+                  style="width: 200px; height: 200px"
+                  class="rounded mx-auto d-block"
+                />
+                <div class="badge bg-light w-100">
+                  <h5 class="mx-auto">Romance</h5>
+                </div>
+              </label>
+            </div>
+
+            <div class="custom-control custom-checkbox image-checkbox">
+              <input type="checkbox" name="genres[]" value="Thriller" class="custom-control-input" id="ck1h" />
+              <label class="custom-control-label" for="ck1h">
+                <img
+                  src="{% static 'img/genres/Thriller.jpeg'%}"
+                  alt="#"
+                  style="width: 200px; height: 200px"
+                  class="rounded mx-auto d-block"
+                />
+                <div class="badge bg-light w-100">
+                  <h5 class="mx-auto">Thriller</h5>
+                </div>
+              </label>
+            </div>
+			<div>
+				<button type="Submit" class="btn btn-light align-item-center">Light</button>
+			</div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- end catalog -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS -->
+    <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'js/jquery.mousewheel.min.js'%}"></script>
+    <script src="{% static 'js/jquery.mCustomScrollbar.min.js'%}"></script>
+    <script src="{% static 'js/wNumb.js'%}"></script>
+    <script src="{% static 'js/nouislider.min.js'%}"></script>
+    <script src="{% static 'js/plyr.min.js'%}"></script>
+    <script src="{% static 'js/jquery.morelines.min.js'%}"></script>
+    <script src="{% static 'js/photoswipe.min.js'%}"></script>
+    <script src="{% static 'js/photoswipe-ui-default.min.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+  </body>
+</html>
